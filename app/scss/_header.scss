@@ -8,7 +8,7 @@
         //     animation: fade-in 300ms ease-in-out forwards;
         // }
 
-        .header__menu {
+        .header__toggle {
             > span:first-child {
                 transform: rotate(45deg);
             }
@@ -26,21 +26,19 @@
     .overlay {
         opacity: 0;
         position: fixed;
-        top: 3.75rem;
+        top: 0px;
         right: 0px;
         bottom: 0px;
         left: 0px;
     
         background-image: linear-gradient($darkBlue, transparent);
-
-        &.fade-in {
-
-        }
     }
 
-
     nav {
-        padding: 1.0625rem 1.5rem;
+        position: relative;
+        background-color: $white;
+        padding-top: 1.0625rem;
+        padding-bottom: 1.0625rem;
     }
 
     &__logo {
@@ -51,7 +49,7 @@
         }
     }
 
-    &__menu {       //Mobile menu
+    &__toggle {       //Mobile Menu Toggle
 
         > span {  // Direct child selector to make it more concrete
             display: block;
@@ -65,6 +63,26 @@
             &:not(:last-child) {
                 margin-bottom: 5px;
             }
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        width: calc(100% - 3rem);
+        left: 50%;
+        transform: translateX(-50%);
+
+        background: $white;
+
+        margin-top: 1.5rem;
+        padding: 1.625rem;
+        border-radius: 5px;
+
+        a {
+            display: block;
+            padding: 0.625rem;
+            color: $darkBlue;
+            text-align: center;
         }
     }
 
