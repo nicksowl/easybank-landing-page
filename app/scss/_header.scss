@@ -1,12 +1,9 @@
 .header {
+    position: relative;
+    z-index: 1;
 
     // Hamburger Open Styles
     &.open {
-
-        // .overlay {
-        //     display: block;
-        //     animation: fade-in 300ms ease-in-out forwards;
-        // }
 
         .header__toggle {
             > span:first-child {
@@ -49,7 +46,7 @@
         }
     }
 
-    &__toggle {       //Mobile Menu Toggle
+    &__toggle {       // Mobile Menu Toggle
 
         > span {  // Direct child selector to make it more concrete
             display: block;
@@ -86,7 +83,7 @@
         }
     }
 
-    &__links {      // Desctop menu
+    &__links {      // Desktop
 
         a {
             position: relative;

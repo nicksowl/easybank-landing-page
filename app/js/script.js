@@ -5,7 +5,7 @@ const overlay = document.querySelector('.overlay');
 const fadeElems = document.querySelectorAll('.has-fade');
 
 btnHamburger.addEventListener('click',function() {
-    console.log('open hamburger menu');
+    // console.log('banana pizza!');
 
     if (header.classList.contains('open')) { // Close Hamburger Menu
         body.classList.remove('noscroll');
@@ -13,9 +13,7 @@ btnHamburger.addEventListener('click',function() {
         fadeElems.forEach(function(element) {
             element.classList.remove('fade-in');
             element.classList.add('fade-out');
-        }); 
-        overlay.classList.remove('fade-in');
-        overlay.classList.add('fade-out'); 
+        });  
     } else {    // Open Hamburger Menu
         body.classList.add('noscroll');
         header.classList.add('open');
@@ -26,3 +24,4 @@ btnHamburger.addEventListener('click',function() {
     }
 
 });
+
